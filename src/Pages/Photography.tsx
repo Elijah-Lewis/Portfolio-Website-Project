@@ -1,7 +1,30 @@
-export function Photography(){
-    return(
-        <>
-            <h1>This is the photography page</h1>
-        </>
-    )
+import pfpImage from "../assets/pfp(2).jpg";
+import { ImageNContent } from "../Components/ImageNContent";
+import { NavBar } from "../Components/NavBar";
+import { Typography } from "@mui/material";
+
+export function Photography() {
+  return (
+    <>
+      <NavBar />
+      <Typography>This is the photography page</Typography>
+      {/* Section 1: Image on Right */}
+      <ImageNContent
+        title="Project Alpha"
+        subtitle="Web Design"
+        description="Detailed description here..."
+        imageSrc={pfpImage}
+        imageRight={true}
+      />
+
+      {/* Section 2: Image on Left */}
+      <ImageNContent
+        title="Project Beta"
+        subtitle="Mobile App"
+        description="Another description here..."
+        imageSrc={pfpImage}
+        imageRight={false}
+      />
+    </>
+  );
 }
