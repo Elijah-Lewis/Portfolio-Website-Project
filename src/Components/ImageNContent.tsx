@@ -28,24 +28,30 @@ export function ImageNContent({
       }}
     >
       {/* Text Column */}
-      <Grid item size={6}>
+      <Grid size={6}>
         <Typography
           variant="overline"
-          color="secondary"
+          color="white"
           sx={{ display: "block", mb: 1 }}
         >
           {subtitle}
         </Typography>
-        <Typography variant="h4" component="h2" gutterBottom fontWeight="bold">
+        <Typography
+          variant="h4"
+          component="h2"
+          gutterBottom
+          fontWeight="bold"
+          color="white"
+        >
           {title}
         </Typography>
-        <Typography variant="body1" color="text.secondary">
+        <Typography variant="body1" color="white">
           {description}
         </Typography>
       </Grid>
 
       {/* Image Column */}
-      <Grid item size={6} sx={{ display: "flex", justifyContent: "center" }}>
+      <Grid size={6} sx={{ display: "flex", justifyContent: "center" }}>
         <Box
           component="img"
           src={imageSrc}
