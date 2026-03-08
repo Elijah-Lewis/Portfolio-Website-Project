@@ -11,13 +11,11 @@ export function Projects() {
   const projects = [
     {
       title: "Project Alpha",
-      subtitle: "Web Design",
       description: "Detailed description here...",
       image: lightning,
     },
     {
       title: "Project Beta",
-      subtitle: "Mobile App",
       description: "Another description here...",
       image: ise,
     },
@@ -48,16 +46,22 @@ export function Projects() {
           }}
         >
           <Box sx={{ p: 4 }}>
-            <Typography variant="h4" gutterBottom color="white">
-              This is the projects page
+            <Typography
+              variant="h2"
+              gutterBottom
+              color="white"
+              align="center"
+              sx={{ fontWeight: "bold", mb: 4 }}
+            >
+              Projects
             </Typography>
+            <hr></hr>
 
             {/* 2. Scalable Loop */}
             {projects.map((project, index) => (
               <ImageNContent
                 key={project.title} // Use title as a unique key
                 title={project.title}
-                subtitle={project.subtitle}
                 description={project.description}
                 imageSrc={project.image}
                 // 3. Alternating Logic:

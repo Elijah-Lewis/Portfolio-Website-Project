@@ -8,20 +8,31 @@ import ise from "../assets/Screenshot 2025-08-18 180652.png";
 
 export function Passions() {
   // 1. Centralized Data: Simply add a new object here to create a new section
-  const projects = [
+  const passions = [
     {
-      title: "Passion 1",
-      subtitle: "Web Design",
-      description: "Detailed description here...",
+      title: "Music",
+      description: `From record collecting to Live shows, I love engaging with artists and their sonical creations.`,
       image: lightning,
     },
     {
-      title: "Passion 2",
-      subtitle: "Mobile App",
-      description: "Another description here...",
+      title: "Art",
+      description: `As I travel for internships and leisure, one thing that I ensure to do is to visit art museums.
+        \nThe environments are often soothing and relaxing, encouraging visitors to enter an introspective state.`,
+      image: [lightning, ise],
+    },
+    {
+      title: "Nature",
+      description: `Throughout the world, there are few things that many people collectively agree are calming and exciting.
+                    One of these things is nature, and I relate to the masses in my enjoyment of nature.
+                    From beaches to mountains, nature never ceases to fascinate and soothe me.`,
+      image: lightning,
+    },
+    {
+      title: "Books",
+      description: `Whether it's a bedtime story or a fantasy getaway on a beach, books always come in clutch for quick enjoyment.
+      Personally, historical fiction, and stories relating African American experiences are extremely exciting and intruiging.`,
       image: ise,
     },
-    // Future projects go here
   ];
 
   return (
@@ -48,18 +59,24 @@ export function Passions() {
           }}
         >
           <Box sx={{ p: 4 }}>
-            <Typography variant="h4" gutterBottom sx={{ color: "white" }}>
-              This is the passions page
+            <Typography
+              variant="h2"
+              gutterBottom
+              color="white"
+              align="center"
+              sx={{ fontWeight: "bold", mb: 4 }}
+            >
+              Passions
             </Typography>
+            <hr></hr>
 
             {/* 2. Scalable Loop */}
-            {projects.map((project, index) => (
+            {passions.map((passion, index) => (
               <ImageNContent
-                key={project.title} // Use title as a unique key
-                title={project.title}
-                subtitle={project.subtitle}
-                description={project.description}
-                imageSrc={project.image}
+                key={passion.title} // Use title as a unique key
+                title={passion.title}
+                description={passion.description}
+                imageSrc={passion.image ?? ""}
                 // 3. Alternating Logic:
                 // Index 0 (Even) -> Right: true
                 // Index 1 (Odd)  -> Right: false
