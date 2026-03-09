@@ -1,26 +1,51 @@
-import { ImageNContent } from "../Components/ImageNContent";
+import { ImageSlideshow } from "../Components/ImageSlideshow";
 import { NavBar } from "../Components/NavBar";
-import { Typography, Paper, Box } from "@mui/material";
+import { Typography, Paper, Box, Grid } from "@mui/material";
 
 // Asset Imports
-import lightning from "../assets/Screenshot 2025-04-21 194232.png";
-import ise from "../assets/Screenshot 2025-08-18 180652.png";
+const sfSights2025 = import.meta.glob<{ default: string }>(
+  "../assets/SF_Sights_2025/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const sfImagePaths2025 = Object.values(sfSights2025).map((mod) => mod.default);
+
+const sfSights2024 = import.meta.glob<{ default: string }>(
+  "../assets/SF_Sights_2024/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const sfImagePaths2024 = Object.values(sfSights2024).map((mod) => mod.default);
+
+const ogSFSights = import.meta.glob<{ default: string }>(
+  "../assets/OG_SF_Sights/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const ogSFSightsPaths = Object.values(ogSFSights).map((mod) => mod.default);
+
+const NY_Nights_1 = import.meta.glob<{ default: string }>(
+  "../assets/NY_Nights_1/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const NY_Nights_1Paths = Object.values(NY_Nights_1).map((mod) => mod.default);
+
+const NY_Nights_2 = import.meta.glob<{ default: string }>(
+  "../assets/NY_Nights_2/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const NY_Nights_2Paths = Object.values(NY_Nights_2).map((mod) => mod.default);
+
+const NY_Nights_3 = import.meta.glob<{ default: string }>(
+  "../assets/NY_Nights_3/*.{png,jpg,jpeg,JPEG}",
+  { eager: true },
+);
+// Convert that object into a simple array of image paths
+const NY_Nights_3Paths = Object.values(NY_Nights_3).map((mod) => mod.default);
 
 export function Photography() {
-  const projects = [
-    {
-      title: "Photo 1",
-      description: "Detailed description here...",
-      image: lightning,
-    },
-    {
-      title: "Photo 2",
-      description: "Another description here...",
-      image: ise,
-    },
-    // Future projects go here
-  ];
-
   return (
     <>
       <Paper
@@ -56,19 +81,124 @@ export function Photography() {
             </Typography>
             <hr></hr>
 
-            {/* 2. Scalable Loop */}
-            {projects.map((project, index) => (
-              <ImageNContent
-                key={project.title} // Use title as a unique key
-                title={project.title}
-                description={project.description}
-                imageSrc={project.image}
-                // 3. Alternating Logic:
-                // Index 0 (Even) -> Right: true
-                // Index 1 (Odd)  -> Right: false
-                imageRight={(index + 1) % 2 === 0}
-              />
-            ))}
+            {/*Contact me setion */}
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <Grid size={6}>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  color="white"
+                  component="a"
+                  href="mailto:ejlewis919@gmail.com"
+                  justifyContent={"center"}
+                  alignContent={"center"}
+                  alignItems={"center"}
+                  fontWeight={"Bold"}
+                  sx={{ textDecoration: "none", display: "block" }}
+                >
+                  Contact ejlewis919@gmail.com for photo prints
+                </Typography>
+              </Grid>
+              <Grid size={6}>
+                <Typography
+                  variant="h5"
+                  align="center"
+                  color="white"
+                  component="a"
+                  href="https://www.instagram.com/3yes.of.3lij4h"
+                  justifyContent={"center"}
+                  alignContent={"center"}
+                  alignItems={"center"}
+                  fontWeight={"Bold"}
+                  sx={{ textDecoration: "none", display: "block" }}
+                >
+                  Visit @3yes.of.3lij4h on Instagram for more photos
+                </Typography>
+              </Grid>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={sfImagePaths2025}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={NY_Nights_1Paths}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={sfImagePaths2024}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={ogSFSightsPaths}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={NY_Nights_2Paths}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
+
+            <hr></hr>
+            <Grid
+              container
+              justifyContent={"center"}
+              alignItems={"center"}
+              alignContent={"center"}
+            >
+              <ImageSlideshow
+                images={NY_Nights_3Paths}
+                alt={"PhotoSlideshow alt text"}
+              ></ImageSlideshow>
+            </Grid>
           </Box>
         </Paper>
       </Paper>
