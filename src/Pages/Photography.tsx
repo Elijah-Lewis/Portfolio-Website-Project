@@ -59,148 +59,180 @@ export function Photography() {
         }}
       >
         <NavBar showBack={true} />
-        <Paper
-          elevation={3}
-          sx={{
-            bgcolor: "#839705",
-            minHeight: "100vh",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Box sx={{ p: 4 }}>
-            <Typography
-              variant="h2"
-              gutterBottom
-              color="white"
-              align="center"
-              sx={{ fontWeight: "bold", mb: 4 }}
-            >
-              Photography
-            </Typography>
-            <hr></hr>
+        <Box sx={{ pt: "90px" }}>
+          <Paper
+            elevation={3}
+            sx={{
+              bgcolor: "#839705",
+              minHeight: "100vh",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Box sx={{ p: 4 }}>
+              <Typography
+                variant="h2"
+                gutterBottom
+                color="white"
+                align="center"
+                sx={{ fontWeight: "bold", mb: 4 }}
+              >
+                Photography
+              </Typography>
+              <hr></hr>
 
-            {/*Contact me setion */}
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <Grid size={6}>
-                <Typography
-                  variant="h5"
-                  align="center"
-                  color="white"
-                  component="a"
-                  href="mailto:ejlewis919@gmail.com"
-                  justifyContent={"center"}
-                  alignContent={"center"}
-                  alignItems={"center"}
-                  fontWeight={"Bold"}
-                  sx={{ textDecoration: "none", display: "block" }}
-                >
-                  Contact ejlewis919@gmail.com for photo prints
+              {/*Contact me setion */}
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <Grid size={6}>
+                  <Typography
+                    variant="h5"
+                    align="center"
+                    color="white"
+                    component="a"
+                    href="mailto:ejlewis919@gmail.com"
+                    justifyContent={"center"}
+                    alignContent={"center"}
+                    alignItems={"center"}
+                    fontWeight={"Bold"}
+                    sx={{ textDecoration: "none", display: "block" }}
+                  >
+                    Contact ejlewis919@gmail.com for photo prints
+                  </Typography>
+                </Grid>
+                <Grid size={6}>
+                  <Typography
+                    variant="h5"
+                    align="center"
+                    color="white"
+                    component="a"
+                    href="https://www.instagram.com/3yes.of.3lij4h"
+                    justifyContent={"center"}
+                    alignContent={"center"}
+                    alignItems={"center"}
+                    fontWeight={"Bold"}
+                    sx={{ textDecoration: "none", display: "block" }}
+                  >
+                    Visit @3yes.of.3lij4h on Instagram for more photos
+                  </Typography>
+                </Grid>
+              </Grid>
+
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  San Francisco Summer 25'
                 </Typography>
               </Grid>
-              <Grid size={6}>
-                <Typography
-                  variant="h5"
-                  align="center"
-                  color="white"
-                  component="a"
-                  href="https://www.instagram.com/3yes.of.3lij4h"
-                  justifyContent={"center"}
-                  alignContent={"center"}
-                  alignItems={"center"}
-                  fontWeight={"Bold"}
-                  sx={{ textDecoration: "none", display: "block" }}
-                >
-                  Visit @3yes.of.3lij4h on Instagram for more photos
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={sfImagePaths2025}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
+
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  New York Christmas 23'
                 </Typography>
               </Grid>
-            </Grid>
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={NY_Nights_1Paths}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
 
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={sfImagePaths2025}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  San Francisco Summer 24'
+                </Typography>
+              </Grid>
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={sfImagePaths2024}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
 
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={NY_Nights_1Paths}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  A Day in the Bay
+                </Typography>
+              </Grid>
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={ogSFSightsPaths}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
 
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={sfImagePaths2024}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  Posh Night in New York
+                </Typography>
+              </Grid>
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={NY_Nights_2Paths}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
 
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={ogSFSightsPaths}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
-
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={NY_Nights_2Paths}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
-
-            <hr></hr>
-            <Grid
-              container
-              justifyContent={"center"}
-              alignItems={"center"}
-              alignContent={"center"}
-            >
-              <ImageSlideshow
-                images={NY_Nights_3Paths}
-                alt={"PhotoSlideshow alt text"}
-              ></ImageSlideshow>
-            </Grid>
-          </Box>
-        </Paper>
+              <hr></hr>
+              <Grid container size={12} justifyContent={"Center"}>
+                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                  New York: A Tourist's Experience
+                </Typography>
+              </Grid>
+              <Grid
+                container
+                justifyContent={"center"}
+                alignItems={"center"}
+                alignContent={"center"}
+              >
+                <ImageSlideshow
+                  images={NY_Nights_3Paths}
+                  alt={"PhotoSlideshow alt text"}
+                ></ImageSlideshow>
+              </Grid>
+            </Box>
+          </Paper>
+        </Box>
       </Paper>
     </>
   );

@@ -24,55 +24,48 @@ export function Projects() {
 
   return (
     <>
-      <Paper
-        elevation={24}
-        sx={{
-          bgcolor: "#BBCB2E",
-          minHeight: "100vh",
-          width: "100%",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <NavBar showBack={true} />
-        <Paper
-          elevation={24}
-          sx={{
-            bgcolor: "#839705",
-            minHeight: "100vh",
-            width: "100%",
-            display: "flex",
-            flexDirection: "column",
-          }}
-        >
-          <Box sx={{ p: 4 }}>
-            <Typography
-              variant="h2"
-              gutterBottom
-              color="white"
-              align="center"
-              sx={{ fontWeight: "bold", mb: 4 }}
-            >
-              Projects
-            </Typography>
-            <hr></hr>
+      <Box sx={{ pt: "90px" }}>
+        <Paper>
+          <NavBar showBack={true} />
+          <Paper
+            elevation={24}
+            sx={{
+              bgcolor: "#839705",
+              minHeight: "100vh",
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <Box sx={{ p: 4 }}>
+              <Typography
+                variant="h2"
+                gutterBottom
+                color="white"
+                align="center"
+                sx={{ fontWeight: "bold", mb: 4 }}
+              >
+                Projects
+              </Typography>
+              <hr></hr>
 
-            {/* 2. Scalable Loop */}
-            {projects.map((project, index) => (
-              <ImageNContent
-                key={project.title} // Use title as a unique key
-                title={project.title}
-                description={project.description}
-                imageSrc={project.image}
-                // 3. Alternating Logic:
-                // Index 0 (Even) -> Right: true
-                // Index 1 (Odd)  -> Right: false
-                imageRight={(1 + index) % 2 === 0}
-              />
-            ))}
-          </Box>
+              {/* 2. Scalable Loop */}
+              {projects.map((project, index) => (
+                <ImageNContent
+                  key={project.title} // Use title as a unique key
+                  title={project.title}
+                  description={project.description}
+                  imageSrc={project.image}
+                  // 3. Alternating Logic:
+                  // Index 0 (Even) -> Right: true
+                  // Index 1 (Odd)  -> Right: false
+                  imageRight={(1 + index) % 2 === 0}
+                />
+              ))}
+            </Box>
+          </Paper>
         </Paper>
-      </Paper>
+      </Box>
     </>
   );
 }

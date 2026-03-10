@@ -1,4 +1,11 @@
-import { AppBar, Typography, Toolbar, Button, Grid } from "@mui/material";
+import {
+  AppBar,
+  Typography,
+  Toolbar,
+  Button,
+  Grid,
+  Paper,
+} from "@mui/material";
 import { Link } from "react-router-dom";
 import HomeIcon from "@mui/icons-material/Home";
 // Add 'showBack' prop (defaults to false)
@@ -28,7 +35,6 @@ export function NavBar({ showBack = false }: { showBack?: boolean }) {
           )}
 
           <Typography
-            variant="h3"
             component="a"
             href="https://www.linkedin.com/in/ejlewis24"
             target="_blank"
@@ -43,52 +49,64 @@ export function NavBar({ showBack = false }: { showBack?: boolean }) {
               color: "inherit",
               pointerEvents: "auto",
               zIndex: 1,
+              fontWeight: "Bold",
+              typography: { xs: "h3", md: "h2" },
             }}
           >
             Elijah Lewis
           </Typography>
         </Toolbar>
+        <Paper
+          elevation={3}
+          sx={{
+            bgcolor: "#BBCB2E",
+            width: "100%",
+            display: "flex",
+            flexDirection: "column",
+          }}
+        >
+          {" "}
+          <Grid
+            container
+            spacing={4}
+            marginBottom={1}
+            sx={{ justifyContent: "center", alignItems: "center", mt: 1 }}
+          >
+            <Grid size={4}>
+              <Button
+                variant="contained"
+                component={Link}
+                to="/Projects"
+                sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
+              >
+                <b>Projects</b>
+              </Button>
+            </Grid>
+
+            <Grid size={4}>
+              <Button
+                variant="contained"
+                component={Link}
+                to="/Passions"
+                sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
+              >
+                <b>Passions</b>
+              </Button>
+            </Grid>
+
+            <Grid size={4}>
+              <Button
+                variant="contained"
+                component={Link}
+                to="/Photography"
+                sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
+              >
+                <b>Photography</b>
+              </Button>
+            </Grid>
+          </Grid>
+        </Paper>
       </AppBar>
-      <Toolbar /> {/* Spacer */}
-      <Grid
-        container
-        spacing={4}
-        marginBottom={1}
-        sx={{ justifyContent: "center", alignItems: "center", mt: 1 }}
-      >
-        <Grid size={4}>
-          <Button
-            variant="contained"
-            component={Link}
-            to="/Projects"
-            sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
-          >
-            <b>Projects</b>
-          </Button>
-        </Grid>
-
-        <Grid size={4}>
-          <Button
-            variant="contained"
-            component={Link}
-            to="/Passions"
-            sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
-          >
-            <b>Passions</b>
-          </Button>
-        </Grid>
-
-        <Grid size={4}>
-          <Button
-            variant="contained"
-            component={Link}
-            to="/Photography"
-            sx={{ bgcolor: "#6B7445", width: "100%", color: "white" }}
-          >
-            <b>Photography</b>
-          </Button>
-        </Grid>
-      </Grid>
     </>
   );
 }
