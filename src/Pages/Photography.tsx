@@ -90,42 +90,48 @@ export function Photography() {
                 alignContent={"center"}
               >
                 <Grid size={6}>
-                  <Typography
-                    variant="h5"
-                    align="center"
-                    color="white"
-                    component="a"
-                    href="mailto:ejlewis919@gmail.com"
-                    justifyContent={"center"}
-                    alignContent={"center"}
-                    alignItems={"center"}
-                    fontWeight={"Bold"}
-                    sx={{ textDecoration: "none", display: "block" }}
-                  >
-                    Contact ejlewis919@gmail.com for photo prints
-                  </Typography>
+                  <Paper sx={{ bgcolor: "#6B7445", borderRadius: 45 }}>
+                    <Typography
+                      variant="h5"
+                      align="center"
+                      color="white"
+                      component="a"
+                      href="mailto:ejlewis919@gmail.com"
+                      justifyContent={"center"}
+                      alignContent={"center"}
+                      alignItems={"center"}
+                      fontWeight={"Bold"}
+                      sx={{ textDecoration: "none", display: "block" }}
+                    >
+                      Contact ejlewis919@gmail.com for photo prints
+                    </Typography>
+                  </Paper>
                 </Grid>
                 <Grid size={6}>
-                  <Typography
-                    variant="h5"
-                    align="center"
-                    color="white"
-                    component="a"
-                    href="https://www.instagram.com/3yes.of.3lij4h"
-                    justifyContent={"center"}
-                    alignContent={"center"}
-                    alignItems={"center"}
-                    fontWeight={"Bold"}
-                    sx={{ textDecoration: "none", display: "block" }}
-                  >
-                    Visit @3yes.of.3lij4h on Instagram for more photos
-                  </Typography>
+                  <Paper sx={{ bgcolor: "#6B7445", borderRadius: 45 }}>
+                    <Typography
+                      variant="h5"
+                      align="center"
+                      color="white"
+                      component="a"
+                      href="https://www.instagram.com/3yes.of.3lij4h"
+                      justifyContent={"center"}
+                      alignContent={"center"}
+                      alignItems={"center"}
+                      fontWeight={"Bold"}
+                      sx={{ textDecoration: "none", display: "block" }}
+                    >
+                      Visit @3yes.of.3lij4h on Instagram for more photos
+                    </Typography>
+                  </Paper>
                 </Grid>
               </Grid>
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   San Francisco Summer 25'
                 </Typography>
               </Grid>
@@ -143,7 +149,9 @@ export function Photography() {
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   New York Christmas 23'
                 </Typography>
               </Grid>
@@ -161,7 +169,9 @@ export function Photography() {
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   San Francisco Summer 24'
                 </Typography>
               </Grid>
@@ -179,7 +189,9 @@ export function Photography() {
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   A Day in the Bay
                 </Typography>
               </Grid>
@@ -197,7 +209,9 @@ export function Photography() {
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   Posh Night in New York
                 </Typography>
               </Grid>
@@ -215,7 +229,9 @@ export function Photography() {
 
               <hr></hr>
               <Grid container size={12} justifyContent={"Center"}>
-                <Typography sx={{ fontWeight: "Bold", color: "White" }}>
+                <Typography
+                  sx={{ fontWeight: "Bold", color: "White", fontSize: 40 }}
+                >
                   New York: A Tourist's Experience
                 </Typography>
               </Grid>
