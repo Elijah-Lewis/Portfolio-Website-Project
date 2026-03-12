@@ -92,7 +92,6 @@ export function Photography() {
                 <Grid size={6}>
                   <Paper sx={{ bgcolor: "#6B7445", borderRadius: 45 }}>
                     <Typography
-                      variant="h5"
                       align="center"
                       color="white"
                       component="a"
@@ -101,7 +100,11 @@ export function Photography() {
                       alignContent={"center"}
                       alignItems={"center"}
                       fontWeight={"Bold"}
-                      sx={{ textDecoration: "none", display: "block" }}
+                      sx={{
+                        textDecoration: "none",
+                        display: "block",
+                        typography: "xs: h8, md: h3",
+                      }}
                     >
                       Contact ejlewis919@gmail.com for photo prints
                     </Typography>
@@ -110,7 +113,6 @@ export function Photography() {
                 <Grid size={6}>
                   <Paper sx={{ bgcolor: "#6B7445", borderRadius: 45 }}>
                     <Typography
-                      variant="h5"
                       align="center"
                       color="white"
                       component="a"
@@ -119,7 +121,11 @@ export function Photography() {
                       alignContent={"center"}
                       alignItems={"center"}
                       fontWeight={"Bold"}
-                      sx={{ textDecoration: "none", display: "block" }}
+                      sx={{
+                        textDecoration: "none",
+                        display: "block",
+                        typography: "xs: h8, md: h3",
+                      }}
                     >
                       Visit @3yes.of.3lij4h on Instagram for more photos
                     </Typography>

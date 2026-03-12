@@ -50,7 +50,7 @@ export function NavBar({ showBack = false }: { showBack?: boolean }) {
               pointerEvents: "auto",
               zIndex: 1,
               fontWeight: "Bold",
-              typography: { xs: "h3", md: "h2" },
+              typography: { xs: "h4", md: "h2" },
             }}
           >
             Elijah Lewis
